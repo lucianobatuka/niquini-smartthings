@@ -1,7 +1,7 @@
 /**
  *  Tasmota generic switch - icon fan
  *
- *  Copyright 2020 niquini.com - Wanderson Niquini
+ *  Copyright 2020 https://niquini.com
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
