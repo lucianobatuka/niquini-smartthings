@@ -523,8 +523,8 @@ def moduleMap() {
         "1117": [name: "Virtual Contact Sensor", type: "Tasmota Virtual Contact Sensor"],
         "1118": [name: "Virtual Motion Sensor", type: "Tasmota Virtual Motion Sensor"],
         "1119": [name: "Fan", type: "Tasmota generic switch - icon fan"],
-        "1120": [name: "Fan", type: "Tasmota generic switch - icon light"],
-        "1121": [name: "Fan", type: "Tasmota generic switch - icon water valve"]
+        "1120": [name: "Light", type: "Tasmota generic switch - icon light"],
+        "1121": [name: "Water valve", type: "Tasmota generic switch - icon water valve"]
     ]
     def defaultModule = [
     	 "Tasmota generic switch - icon fan":            [channel: 1, messaging: false,   virtual: false, child: false, settings: ["ip"]],
