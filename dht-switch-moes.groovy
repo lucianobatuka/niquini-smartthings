@@ -1,7 +1,7 @@
 /**
- *  Zemismart Button V0.9
+ *  Moes Button V0.9
  *
- *  Copyright 2020 YSB
+ *  Copyright 2020
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
  *  in compliance with the License. You may obtain a copy of the License at:
@@ -30,16 +30,7 @@ metadata
       capability "Sensor"
       capability "Health Check"
       
-      fingerprint inClusters: "0000, 0001, 0006", outClusters: "0019, 000A", manufacturer: "_TZ3400_keyjqthh", model: "TS0041", deviceJoinName: "Zemismart Button", mnmn: "SmartThings", vid: "generic-2-button"
-      fingerprint inClusters: "0000, 0001, 0006", outClusters: "0019, 000A", manufacturer: "_TZ3400_tk3s5tyg", model: "TS0041", deviceJoinName: "Zemismart Button", mnmn: "SmartThings", vid: "generic-2-button"
-      fingerprint inClusters: "0000, 0001, 0006", outClusters: "0019", manufacturer: "_TYZB02_keyjhapk", model: "TS0042", deviceJoinName: "Zemismart Button", mnmn: "SmartThings", vid: "generic-2-button"
-      fingerprint inClusters: "0000, 000A, 0001 0006", outClusters: "0019", manufacturer: "_TZ3000_rrjr1qOu", model: "TS0043", deviceJoinName: "Moes Button", mnmn: "SmartThings", vid: "generic-3-button"  
-      fingerprint inClusters: "0000, 0001, 0006", outClusters: "0019", manufacturer: "_TZ3400_keyjhapk", model: "TS0042", deviceJoinName: "Zemismart Button", mnmn: "SmartThings", vid: "generic-2-button"
-      fingerprint inClusters: "0000, 0001, 0006", outClusters: "0019, 000A", manufacturer: "_TZ3400_key8kk7r", model: "TS0043", deviceJoinName: "Zemismart Button", mnmn: "SmartThings", vid: "generic-4-button"
-      fingerprint inClusters: "0000, 0001, 0006", outClusters: "0019", manufacturer: "_TYZB02_key8kk7r", model: "TS0043", deviceJoinName: "Zemismart Button", mnmn: "SmartThings", vid: "generic-4-button"
-      fingerprint inClusters: "0000, 000A, 0001 0006", outClusters: "0019", manufacturer: "_TZ3000_bi6lpsew", model: "TS0043", deviceJoinName: "Zemismart Button", mnmn: "SmartThings", vid: "generic-4-button"
-      fingerprint inClusters: "0000, 0001 0006", outClusters: "0019, 000A", manufacturer: "_TZ3000_qzjcsmar", model: "TS0043", deviceJoinName: "Zemismart Button", mnmn: "SmartThings", vid: "generic-4-button"
-      fingerprint inClusters: "0000, 000A, 0001 0006", outClusters: "0019", manufacturer: "_TZ3000_vp6clf9d", model: "TS0044", deviceJoinName: "Zemismart Button", mnmn: "SmartThings", vid: "generic-4-button"
+      fingerprint inClusters: "0000, 000A, 0001 0006", outClusters: "0019", manufacturer: "_TZ3000_rrjr1qOu", model: "TS0043", deviceJoinName: "Moes Button", mnmn: "SmartThings", vid: "generic-3-button"
    }
 
    tiles(scale: 2)
@@ -72,31 +63,14 @@ private getCLUSTER_GROUPS() { 0x0004 }
 private getCLUSTER_SCENES() { 0x0005 }
 private getCLUSTER_WINDOW_COVERING() { 0x0102 }
 
-private boolean isZemismart1gang() 
-{
-   device.getDataValue("model") == "TS0041"
-}
-
-private boolean isZemismart2gang() 
-{
-   device.getDataValue("model") == "TS0042"
-}
-
-private boolean isZemismart3gang() 
+private boolean isMoes3gang() 
 {
    device.getDataValue("model") == "TS0043"
-}
-
-private boolean isZemismart4gang() 
-{
-   device.getDataValue("model") == "TS0044"
 }
     
 private Map getBatteryEvent(value) 
 {
    def result = [:]
-   //result.value = value
-   //Always value 0
    result.value = 100
    result.name = 'battery'
    result.descriptionText = "${device.displayName} battery was ${result.value}%"
@@ -113,7 +87,7 @@ def parse(String description)
    log.debug "description is $description"
    def event = zigbee.getEvent(description)
 
-   if (event) //non-standard 
+   if (event)
    {
        sendEvent(event)
        log.debug "sendEvent $event"
@@ -269,19 +243,19 @@ private void createChildButtonDevices(numberOfButtons)
 def installed() 
 {
     def numberOfButtons
-    if (isZemismart1gang()) 
+    if (isMoes1gang()) 
     {
        numberOfButtons = 1
     } 
-    else if (isZemismart2gang()) 
+    else if (isMoes2gang()) 
     {
        numberOfButtons = 2
     } 
-    else if (isZemismart3gang()) 
+    else if (isMoes3gang()) 
     {
        numberOfButtons = 3
     }
-    else if (isZemismart4gang()) 
+    else if (isMoes4gang()) 
     {
        numberOfButtons = 4
     }
