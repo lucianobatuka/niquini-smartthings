@@ -91,11 +91,6 @@ private boolean isZemismart4gang()
 {
    device.getDataValue("model") == "TS0044"
 }
-
-private boolean isMoes3gang() 
-{
-   device.getDataValue("model") == "TS0043"
-}
     
 private Map getBatteryEvent(value) 
 {
@@ -283,10 +278,6 @@ def installed()
        numberOfButtons = 2
     } 
     else if (isZemismart3gang()) 
-    {
-       numberOfButtons = 3
-    }
-    else if (isMoes3gang()) 
     {
        numberOfButtons = 3
     }
