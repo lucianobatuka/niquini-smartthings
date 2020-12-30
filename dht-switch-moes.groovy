@@ -33,7 +33,7 @@ metadata
       fingerprint inClusters: "0000, 0001, 0006", outClusters: "0019, 000A", manufacturer: "_TZ3400_keyjqthh", model: "TS0041", deviceJoinName: "Zemismart Button", mnmn: "SmartThings", vid: "generic-2-button"
       fingerprint inClusters: "0000, 0001, 0006", outClusters: "0019, 000A", manufacturer: "_TZ3400_tk3s5tyg", model: "TS0041", deviceJoinName: "Zemismart Button", mnmn: "SmartThings", vid: "generic-2-button"
       fingerprint inClusters: "0000, 0001, 0006", outClusters: "0019", manufacturer: "_TYZB02_keyjhapk", model: "TS0042", deviceJoinName: "Zemismart Button", mnmn: "SmartThings", vid: "generic-2-button"
-      fingerprint inClusters: "0000, 000A, 0001 0006", outClusters: "0019", manufacturer: "_TZ3000_rrjr1q0u", model: "TS0043", deviceJoinName: "Moes Button", mnmn: "SmartThings", vid: "generic-3-button"  
+      fingerprint inClusters: "0000, 000A, 0001 0006", outClusters: "0019", manufacturer: "_TZ3000_rrjr1qOu", model: "TS0043", deviceJoinName: "Moes Button", mnmn: "SmartThings", vid: "generic-3-button"  
       fingerprint inClusters: "0000, 0001, 0006", outClusters: "0019", manufacturer: "_TZ3400_keyjhapk", model: "TS0042", deviceJoinName: "Zemismart Button", mnmn: "SmartThings", vid: "generic-2-button"
       fingerprint inClusters: "0000, 0001, 0006", outClusters: "0019, 000A", manufacturer: "_TZ3400_key8kk7r", model: "TS0043", deviceJoinName: "Zemismart Button", mnmn: "SmartThings", vid: "generic-4-button"
       fingerprint inClusters: "0000, 0001, 0006", outClusters: "0019", manufacturer: "_TYZB02_key8kk7r", model: "TS0043", deviceJoinName: "Zemismart Button", mnmn: "SmartThings", vid: "generic-4-button"
