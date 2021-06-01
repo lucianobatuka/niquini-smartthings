@@ -14,7 +14,7 @@
 import physicalgraph.zigbee.zcl.DataType
 
 metadata {
-	definition (name: "Niquini Gledopto", namespace: "niquini", author: "Wanderson Niquini", ocfDeviceType: "oic.d.light", runLocally: true, minHubCoreVersion: '000.021.00001', executeCommandsLocally: true, genericHandler: "ZLL") {
+	definition (name: "Gledopto (2000k-6500k)", namespace: "niquini", author: "Wanderson Niquini", ocfDeviceType: "oic.d.light", runLocally: true, minHubCoreVersion: '000.021.00001', executeCommandsLocally: true, genericHandler: "ZLL") {
 
 		capability "Actuator"
 		capability "Color Control"
